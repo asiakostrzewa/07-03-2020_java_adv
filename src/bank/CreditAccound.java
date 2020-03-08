@@ -3,6 +3,7 @@ package bank;
 public class CreditAccound extends Account {
 
     public CreditAccound(int balance, String number, Client c1) {
+
         super(balance, number, c1);
     }
 

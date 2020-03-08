@@ -16,9 +16,16 @@ public class Account {
         if (cash > 0) {
             balance += cash;
         }
+        if (cash <= 0){
+            throw new MyExeption("Błąd");
+        }
     }
 
     public int withdraw(int cash) {
+        if (cash < 0) {
+            //throw new IllegalArgumentException("Próba wypłaty mniejszej od 0"); //wyjątek
+            throw new NegativeWithdrawExeption("Próba wypłaty mniejszej od 0");
+        }
         if (cash <= balance) {
             balance -= cash;
         }
